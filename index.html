@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserva de Auditório - SEVS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header py-3">
+    <div class="container text-center">
+      <h2>📅 Reserva de Auditório - SEVS</h2>
+      <p class="mb-0 subtitle">Sistema de agendamento de sala de reunião</p>
+    </div>
+  </header>
+
+  <div class="container mt-4 mb-5">
+
+    <div id="alert-area"></div>
+
+    <div class="card shadow-sm mb-5">
+      <div class="card-body p-3">
+        <div id="calendar"></div>
+      </div>
+    </div>
+
+    <section>
+      <h3 class="section-title text-center mb-4">Nova Reserva — Auditório</h3>
+      <div class="card shadow-sm">
+        <div class="card-body p-4">
+          <form id="reservaForm" novalidate>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="nome" class="form-label">Nome do Responsável <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="nome" placeholder="Nome completo" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="setor" class="form-label">Setor <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="setor" placeholder="Setor ou departamento" required>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="telefone" class="form-label">Telefone para contato <span class="text-danger">*</span></label>
+                <input type="tel" class="form-control" id="telefone" placeholder="(81) 99999-9999" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="email" class="form-label">E-mail <span class="text-danger">*</span></label>
+                <input type="email" class="form-control" id="email" placeholder="email@exemplo.com" required>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="descricao" class="form-label">Descrição / Motivo da Reserva <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" maxlength="50" id="descricao" placeholder="Máx. 50 caracteres" required>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="dataInicio" class="form-label">Data da Reserva (Início) <span class="text-danger">*</span></label>
+                <input type="date" class="form-control" id="dataInicio" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="dataFim" class="form-label">Data Limite (repetição)</label>
+                <input type="date" class="form-control" id="dataFim">
+                <div class="form-text">Se não for recorrente, deixe em branco ou igual à data de início.</div>
+              </div>
+            </div>
+
+            <div class="mb-3 form-check d-none" id="divRecorrencia">
+              <input type="checkbox" class="form-check-input" id="repetirSemanal">
+              <label class="form-check-label" for="repetirSemanal">
+                <strong>Repetir semanalmente</strong> — cria reservas toda semana até a data limite
+              </label>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="inicio" class="form-label">Hora de Início <span class="text-danger">*</span></label>
+                <select class="form-select" id="inicio" required></select>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="fim" class="form-label">Hora de Fim <span class="text-danger">*</span></label>
+                <select class="form-select" id="fim" required></select>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary-custom w-100 py-2" id="btnReservar">
+              <span id="btnText">✅ Confirmar Reserva</span>
+              <span id="btnSpinner" class="spinner-border spinner-border-sm d-none ms-2" role="status" aria-hidden="true"></span>
+            </button>
+
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Modal: Detalhes da Reserva -->
+  <div class="modal fade" id="modalDetalhes" tabindex="-1" aria-labelledby="modalDetalhesLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header modal-header-custom">
+          <h5 class="modal-title text-white" id="modalDetalhesLabel">📋 Detalhes da Reserva</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <div id="modal-reserva-detalhes"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-danger" id="confirmDeleteBtn">🗑️ Excluir Reserva</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Confirmação de Exclusão -->
+  <div class="modal fade" id="modalConfirmDelete" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header bg-danger text-white">
+          <h5 class="modal-title">Confirmar Exclusão</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body text-center">
+          <p class="mb-1">Tem certeza que deseja excluir esta reserva?</p>
+          <p class="text-muted small">Esta ação não pode ser desfeita.</p>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-danger btn-sm" id="btnFinalDelete">Confirmar Exclusão</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-custom text-center py-3 mt-4">
+    <div class="container">
+      <small>Desenvolvido por: <strong>Núcleo de Transformação Digital (NTD)</strong> / SEVS RECIFE</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/locales/pt-br.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
