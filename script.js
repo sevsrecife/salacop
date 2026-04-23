@@ -127,7 +127,6 @@ function initCalendar() {
     dateClick: function (info) {
       const dataInput = document.getElementById('dataInicio');
       dataInput.value = info.dateStr;
-      dataInput.dispatchEvent(new Event('change'));
       document.getElementById('reservaForm').scrollIntoView({ behavior: 'smooth' });
     }
   });
@@ -250,44 +249,6 @@ function populateTimeSelects() {
   fimSel.value    = '09:00';
 }
 
-document.getElementById('dataFim').addEventListener('change', function () {
-  const inicio = document.getElementById('dataInicio').value;
-  const div    = document.getElementById('divRecorrencia');
-
-  if (this.value && inicio && this.value > inicio) {
-    div.classList.remove('d-none');
-  } else {
-    div.classList.add('d-none');
-    document.getElementById('repetirSemanal').checked = false;
-  }
-});
-
-document.getElementById('dataInicio').addEventListener('change', function () {
-  const fimInput = document.getElementById('dataFim');
-  fimInput.min   = this.value;
-  if (fimInput.value && fimInput.value < this.value) {
-    fimInput.value = this.value;
-    document.getElementById('divRecorrencia').classList.add('d-none');
-  }
-});
-
-function generateDates(startDate, endDate, weekly) {
-  if (!weekly || !endDate || endDate <= startDate) {
-    return [startDate];
-  }
-
-  const dates   = [];
-  let   current = new Date(`${startDate}T12:00:00`);
-  const end     = new Date(`${endDate}T12:00:00`);
-
-  while (current <= end) {
-    dates.push(current.toISOString().split('T')[0]);
-    current.setDate(current.getDate() + 7);
-  }
-
-  return dates;
-}
-
 document.getElementById('reservaForm').addEventListener('submit', async function (e) {
   e.preventDefault();
 
@@ -297,10 +258,8 @@ document.getElementById('reservaForm').addEventListener('submit', async function
   const email      = document.getElementById('email').value.trim();
   const descricao  = document.getElementById('descricao').value.trim();
   const dataInicio = document.getElementById('dataInicio').value;
-  const dataFim    = document.getElementById('dataFim').value || dataInicio;
   const horaInicio = document.getElementById('inicio').value;
   const horaFim    = document.getElementById('fim').value;
-  const semanal    = document.getElementById('repetirSemanal').checked;
 
   if (!nome || !setor || !telefone || !email || !descricao || !dataInicio) {
     showAlert('⚠️ Preencha todos os campos obrigatórios antes de confirmar.');
@@ -312,18 +271,13 @@ document.getElementById('reservaForm').addEventListener('submit', async function
     return;
   }
 
-  const dates = generateDates(dataInicio, dataFim, semanal);
-
-  const conflitos = dates.filter(d => hasConflict(d, horaInicio, horaFim));
-  if (conflitos.length > 0) {
-    const listaDatas = conflitos
-      .map(d => new Date(`${d}T12:00:00`).toLocaleDateString('pt-BR'))
-      .join(', ');
+  if (hasConflict(dataInicio, horaInicio, horaFim)) {
+    const dataFormatada = new Date(`${dataInicio}T12:00:00`).toLocaleDateString('pt-BR');
     showAlert(`
       🚫 <strong>Conflito de horário detectado!</strong><br>
-      Já existe uma reserva no(s) dia(s) <strong>${listaDatas}</strong>
+      Já existe uma reserva em <strong>${dataFormatada}</strong>
       entre <strong>${horaInicio}</strong> e <strong>${horaFim}</strong>.<br>
-      Por favor, escolha outro horário ou data.`);
+      Por favor, escolha outro horário.`);
     return;
   }
 
@@ -337,37 +291,27 @@ document.getElementById('reservaForm').addEventListener('submit', async function
   try {
     await fetchReservas();
 
-    const conflitosFinais = dates.filter(d => hasConflict(d, horaInicio, horaFim));
-    if (conflitosFinais.length > 0) {
-      const listaDatas = conflitosFinais
-        .map(d => new Date(`${d}T12:00:00`).toLocaleDateString('pt-BR'))
-        .join(', ');
+    if (hasConflict(dataInicio, horaInicio, horaFim)) {
+      const dataFormatada = new Date(`${dataInicio}T12:00:00`).toLocaleDateString('pt-BR');
       showAlert(`
         🚫 <strong>Conflito identificado após sincronização!</strong><br>
-        Outro usuário acabou de reservar o(s) dia(s) <strong>${listaDatas}</strong>
+        Outro usuário acabou de reservar <strong>${dataFormatada}</strong>
         no mesmo horário. Escolha outro período.`);
       return;
     }
 
-    const novasReservas = dates.map(d => ({
+    const novaReserva = {
       id: gerarId(),
       nome, setor, telefone, email, descricao,
-      data: d, horaInicio, horaFim
-    }));
+      data: dataInicio, horaInicio, horaFim
+    };
 
-    reservas.push(...novasReservas);
+    reservas.push(novaReserva);
     await saveReservas();
 
-    novasReservas.forEach(r => calendar.addEvent(reservaToEvent(r)));
-
-    const qtd = novasReservas.length;
-    showAlert(
-      `✅ <strong>${qtd} reserva${qtd > 1 ? 's' : ''}</strong> registrada${qtd > 1 ? 's' : ''} com sucesso!`,
-      'success'
-    );
-
+    calendar.addEvent(reservaToEvent(novaReserva));
+    showAlert('✅ <strong>Reserva registrada com sucesso!</strong>', 'success');
     this.reset();
-    document.getElementById('divRecorrencia').classList.add('d-none');
 
   } catch (err) {
     console.error('Erro ao salvar reserva:', err);
@@ -388,7 +332,6 @@ async function init() {
 
   const today = new Date().toISOString().split('T')[0];
   document.getElementById('dataInicio').min = today;
-  document.getElementById('dataFim').min    = today;
 
   initCalendar();
 
