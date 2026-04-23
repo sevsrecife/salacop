@@ -197,7 +197,6 @@ function openEventModal(event) {
 
 document.getElementById('confirmDeleteBtn').addEventListener('click', () => {
   bootstrap.Modal.getInstance(document.getElementById('modalDetalhes')).hide();
-  // Limpa PIN e erro ao abrir modal
   document.getElementById('inputPinDelete').value = '';
   document.getElementById('pinErro').classList.add('d-none');
   new bootstrap.Modal(document.getElementById('modalConfirmDelete')).show();
@@ -206,17 +205,17 @@ document.getElementById('confirmDeleteBtn').addEventListener('click', () => {
 document.getElementById('btnFinalDelete').addEventListener('click', async function () {
   const pinDigitado = document.getElementById('inputPinDelete').value.trim();
   const reserva     = reservas.find(r => r.id === selectedEventId);
+  const pinErroEl   = document.getElementById('pinErro');
 
   if (!pinDigitado) {
-    document.getElementById('pinErro').classList.remove('d-none');
+    pinErroEl.classList.remove('d-none');
     return;
   }
 
-  // Verifica PIN da reserva primeiro (local, sem requisição)
-  const pinReservaOk = pinDigitado === reserva?.pin;
+  // Verifica PIN da própria reserva (local)
+  let autorizado = pinDigitado === reserva?.pin;
 
-  // Se não bater, valida contra PIN admin no Worker
-  let autorizado = pinReservaOk;
+  // Se não bater, consulta PIN admin no Worker
   if (!autorizado) {
     try {
       const res  = await fetch(`${API_URL}/validate-admin`, {
@@ -232,41 +231,11 @@ document.getElementById('btnFinalDelete').addEventListener('click', async functi
   }
 
   if (!autorizado) {
-    document.getElementById('pinErro').classList.remove('d-none');
+    pinErroEl.classList.remove('d-none');
     return;
   }
 
-  document.getElementById('pinErro').classList.add('d-none');
-
-  const btn = this;
-  btn.disabled    = true;
-  btn.textContent = 'Excluindo...';
-
-  try {
-    await fetchReservas();
-    reservas = reservas.filter(r => r.id !== selectedEventId);
-    await saveReservas();
-
-    calendar.getEventById(selectedEventId)?.remove();
-    bootstrap.Modal.getInstance(document.getElementById('modalConfirmDelete')).hide();
-    showAlert('✅ Reserva excluída com sucesso!', 'success');
-
-  } catch (err) {
-    console.error('Erro ao excluir:', err);
-    showAlert(`❌ Erro ao excluir reserva: ${err.message}`);
-  } finally {
-    btn.disabled    = false;
-    btn.textContent = 'Confirmar Exclusão';
-  }
-});
-
-  // Valida PIN
-  if (!pinDigitado || pinDigitado !== reserva?.pin) {
-    document.getElementById('pinErro').classList.remove('d-none');
-    return;
-  }
-
-  document.getElementById('pinErro').classList.add('d-none');
+  pinErroEl.classList.add('d-none');
 
   const btn = this;
   btn.disabled    = true;
@@ -380,7 +349,7 @@ document.getElementById('reservaForm').addEventListener('submit', async function
     await saveReservas();
 
     calendar.addEvent(reservaToEvent(novaReserva));
-    showAlert('✅ <strong>Reserva registrada com sucesso!</strong><br>Guarde seu PIN para cancelar a reserva se necessário.', 'success');
+    showAlert('✅ <strong>Reserva registrada com sucesso!</strong><br>Guarde seu PIN — ele será necessário para cancelar a reserva.', 'success');
     this.reset();
 
   } catch (err) {

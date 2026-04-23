@@ -11,10 +11,9 @@
 <body>
 
   <header class="site-header py-3">
-    <div class="container text-center position-relative">
+    <div class="container text-center">
       <h2>📅 Reserva de Auditório - SEVS</h2>
       <p class="mb-0 subtitle">Sistema de agendamento de sala de reunião</p>
-      
     </div>
   </header>
 
@@ -56,12 +55,12 @@
               </div>
             </div>
 
-              <div class="row">
-                <div class="col-md-6 mb-3">
+            <div class="row">
+              <div class="col-md-6 mb-3">
                 <label for="pin" class="form-label">PIN de segurança <span class="text-danger">*</span></label>
                 <input type="password" class="form-control" id="pin" maxlength="4" placeholder="4 dígitos numéricos" required>
-              <div class="form-text">Guarde este PIN — ele será necessário para cancelar a reserva.</div>
-             </div>
+                <div class="form-text">Guarde este PIN — ele será necessário para cancelar a reserva.</div>
+              </div>
             </div>
 
             <div class="mb-3">
@@ -70,10 +69,10 @@
             </div>
 
             <div class="row">
-                <div class="col-md-6 mb-3">
+              <div class="col-md-6 mb-3">
                 <label for="dataInicio" class="form-label">Data da Reserva <span class="text-danger">*</span></label>
                 <input type="date" class="form-control" id="dataInicio" required>
-                </div>
+              </div>
             </div>
 
             <div class="row">
@@ -125,41 +124,14 @@
           <h5 class="modal-title">Confirmar Exclusão</h5>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
         </div>
-      <div class="modal-body text-center">
-        <p class="mb-2">Informe o <strong>PIN</strong> da reserva ou o <strong>PIN de administrador</strong>.</p>
-        <input type="password" class="form-control text-center" id="inputPinDelete" maxlength="20" placeholder="PIN">
-        <p id="pinErro" class="text-danger small mt-2 d-none">PIN incorreto. Tente novamente.</p>
-      </div>
-      <div class="modal-footer justify-content-center">
-        <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-danger btn-sm" id="btnFinalDelete">Confirmar Exclusão</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-  <!-- Modal: Configuração do Token -->
-  <div class="modal fade" id="modalToken" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header modal-header-custom">
-          <h5 class="modal-title text-white">⚙️ Configuração de Acesso</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        <div class="modal-body text-center">
+          <p class="mb-2">Informe o <strong>PIN</strong> da reserva ou o <strong>PIN de administrador</strong>.</p>
+          <input type="password" class="form-control text-center" id="inputPinDelete" maxlength="20" placeholder="PIN">
+          <p id="pinErro" class="text-danger small mt-2 d-none">PIN incorreto. Tente novamente.</p>
         </div>
-        <div class="modal-body">
-          <p class="text-muted small">
-            Cole o <strong>Personal Access Token</strong> do GitHub com permissão
-            <em>Contents: Read &amp; Write</em> no repositório <code>salacop</code>.<br>
-            O token é salvo apenas neste navegador e nunca é enviado ao repositório.
-          </p>
-          <label class="form-label fw-bold">Token atual</label>
-          <p class="text-muted small mb-3" id="tokenAtual">Nenhum token configurado.</p>
-          <label for="inputToken" class="form-label fw-bold">Novo Token</label>
-          <input type="password" class="form-control" id="inputToken" placeholder="github_pat_...">
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-primary-custom" id="btnSalvarToken">Salvar Token</button>
+        <div class="modal-footer justify-content-center">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-danger btn-sm" id="btnFinalDelete">Confirmar Exclusão</button>
         </div>
       </div>
     </div>
