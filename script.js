@@ -1,17 +1,20 @@
 /* ============================================================
-   CONFIGURAÇÃO — preencha antes de publicar no GitHub Pages
+   CONFIGURAÇÃO — token armazenado no localStorage do navegador
    ============================================================ */
-const GITHUB_TOKEN = '';
-const REPO_OWNER   = 'sevsrecife';
-const REPO_NAME    = 'salacop';
-const FILE_PATH    = 'reservas.json';
-/* ============================================================ */
+const REPO_OWNER = 'sevsrecife';
+const REPO_NAME  = 'salacop';
+const FILE_PATH  = 'reservas.json';
+
+function getToken() {
+  return localStorage.getItem('github_token') || '';
+}
 
 const API_URL = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${FILE_PATH}`;
+/* ============================================================ */
 
 let calendar;
-let reservas      = [];
-let currentSha    = null;
+let reservas        = [];
+let currentSha      = null;
 let selectedEventId = null;
 
 /* ============================================================
@@ -37,13 +40,6 @@ function showAlert(message, type = 'danger') {
   area.scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 
-/**
- * Verifica sobreposição de horário para uma data específica.
- * @param {string} data       - "YYYY-MM-DD"
- * @param {string} horaInicio - "HH:MM"
- * @param {string} horaFim    - "HH:MM"
- * @param {string} [excludeId] - ID a ignorar na comparação (para edição futura)
- */
 function hasConflict(data, horaInicio, horaFim, excludeId = null) {
   const newStart = timeToMinutes(horaInicio);
   const newEnd   = timeToMinutes(horaFim);
@@ -53,7 +49,6 @@ function hasConflict(data, horaInicio, horaFim, excludeId = null) {
     if (r.data !== data) return false;
     const rStart = timeToMinutes(r.horaInicio);
     const rEnd   = timeToMinutes(r.horaFim);
-    // Sobreposição real: novo início < fim existente E novo fim > início existente
     return newStart < rEnd && newEnd > rStart;
   });
 }
@@ -64,9 +59,20 @@ function hasConflict(data, horaInicio, horaFim, excludeId = null) {
 
 async function fetchReservas() {
   try {
+    const token = getToken();
+
+    if (!token) {
+      showAlert(
+        `⚙️ <strong>Token não configurado.</strong><br>
+         Clique no botão <strong>⚙️</strong> no topo da página e cole seu Personal Access Token do GitHub.`,
+        'warning'
+      );
+      return [];
+    }
+
     const res = await fetch(API_URL, {
       headers: {
-        Authorization: `token ${GITHUB_TOKEN}`,
+        Authorization: `token ${token}`,
         Accept: 'application/vnd.github.v3+json'
       }
     });
@@ -78,7 +84,6 @@ async function fetchReservas() {
     const data    = await res.json();
     currentSha    = data.sha;
 
-    // Decodifica base64 (com suporte a UTF-8)
     const decoded = decodeURIComponent(
       escape(atob(data.content.replace(/\n/g, '')))
     );
@@ -89,7 +94,7 @@ async function fetchReservas() {
     console.error('Erro ao carregar reservas:', err);
     showAlert(
       `⚠️ <strong>Não foi possível carregar as reservas.</strong><br>
-       Verifique se o token, usuário e repositório estão configurados corretamente em <code>script.js</code>.<br>
+       Verifique se o token está correto clicando em <strong>⚙️</strong> no topo.<br>
        <small class="text-muted">${err.message}</small>`,
       'warning'
     );
@@ -99,14 +104,12 @@ async function fetchReservas() {
 
 async function saveReservas() {
   const jsonStr = JSON.stringify(reservas, null, 2);
-
-  // Codifica para base64 com suporte a UTF-8
   const encoded = btoa(unescape(encodeURIComponent(jsonStr)));
 
   const res = await fetch(API_URL, {
     method: 'PUT',
     headers: {
-      Authorization: `token ${GITHUB_TOKEN}`,
+      Authorization: `token ${getToken()}`,
       Accept: 'application/vnd.github.v3+json',
       'Content-Type': 'application/json'
     },
@@ -122,9 +125,8 @@ async function saveReservas() {
     throw new Error(errData.message || `HTTP ${res.status}`);
   }
 
-  const resData = await res.json();
-  // Atualiza SHA para próximo commit
-  currentSha = resData.content.sha;
+  const resData  = await res.json();
+  currentSha     = resData.content.sha;
 }
 
 /* ============================================================
@@ -153,7 +155,6 @@ function initCalendar() {
     eventClick: function (info) {
       openEventModal(info.event);
     },
-    // Destaca visualmente o dia clicado no form
     dateClick: function (info) {
       const dataInput = document.getElementById('dataInicio');
       dataInput.value = info.dateStr;
@@ -229,20 +230,17 @@ function openEventModal(event) {
   modal.show();
 }
 
-// Passo 1: click em "Excluir" no modal de detalhes → abre confirmação
 document.getElementById('confirmDeleteBtn').addEventListener('click', () => {
   bootstrap.Modal.getInstance(document.getElementById('modalDetalhes')).hide();
   new bootstrap.Modal(document.getElementById('modalConfirmDelete')).show();
 });
 
-// Passo 2: confirmação final de exclusão
 document.getElementById('btnFinalDelete').addEventListener('click', async function () {
   const btn = this;
   btn.disabled    = true;
   btn.textContent = 'Excluindo...';
 
   try {
-    // Re-busca SHA mais recente antes de escrever
     await fetchReservas();
     reservas = reservas.filter(r => r.id !== selectedEventId);
     await saveReservas();
@@ -283,7 +281,6 @@ function populateTimeSelects() {
   fimSel.value    = '09:00';
 }
 
-// Controle de visibilidade do checkbox de recorrência
 document.getElementById('dataFim').addEventListener('change', function () {
   const inicio = document.getElementById('dataInicio').value;
   const div    = document.getElementById('divRecorrencia');
@@ -305,9 +302,6 @@ document.getElementById('dataInicio').addEventListener('change', function () {
   }
 });
 
-/**
- * Gera lista de datas. Se semanal=true, gera uma data por semana entre início e fim.
- */
 function generateDates(startDate, endDate, weekly) {
   if (!weekly || !endDate || endDate <= startDate) {
     return [startDate];
@@ -325,7 +319,6 @@ function generateDates(startDate, endDate, weekly) {
   return dates;
 }
 
-// Submit do formulário
 document.getElementById('reservaForm').addEventListener('submit', async function (e) {
   e.preventDefault();
 
@@ -340,7 +333,6 @@ document.getElementById('reservaForm').addEventListener('submit', async function
   const horaFim    = document.getElementById('fim').value;
   const semanal    = document.getElementById('repetirSemanal').checked;
 
-  // Validações de frontend
   if (!nome || !setor || !telefone || !email || !descricao || !dataInicio) {
     showAlert('⚠️ Preencha todos os campos obrigatórios antes de confirmar.');
     return;
@@ -353,13 +345,11 @@ document.getElementById('reservaForm').addEventListener('submit', async function
 
   const dates = generateDates(dataInicio, dataFim, semanal);
 
-  // Verificação de conflito com dados já em memória (rápida)
   const conflitos = dates.filter(d => hasConflict(d, horaInicio, horaFim));
   if (conflitos.length > 0) {
     const listaDatas = conflitos
       .map(d => new Date(`${d}T12:00:00`).toLocaleDateString('pt-BR'))
       .join(', ');
-
     showAlert(`
       🚫 <strong>Conflito de horário detectado!</strong><br>
       Já existe uma reserva no(s) dia(s) <strong>${listaDatas}</strong>
@@ -368,7 +358,6 @@ document.getElementById('reservaForm').addEventListener('submit', async function
     return;
   }
 
-  // Loading state
   const btn     = document.getElementById('btnReservar');
   const btnText = document.getElementById('btnText');
   const spinner = document.getElementById('btnSpinner');
@@ -377,10 +366,8 @@ document.getElementById('reservaForm').addEventListener('submit', async function
   spinner.classList.remove('d-none');
 
   try {
-    // Re-busca dados atualizados do GitHub (evita conflito de escrita concorrente)
     await fetchReservas();
 
-    // Re-verifica conflitos com dados frescos do servidor
     const conflitosFinais = dates.filter(d => hasConflict(d, horaInicio, horaFim));
     if (conflitosFinais.length > 0) {
       const listaDatas = conflitosFinais
@@ -393,23 +380,15 @@ document.getElementById('reservaForm').addEventListener('submit', async function
       return;
     }
 
-    // Cria os objetos de reserva
     const novasReservas = dates.map(d => ({
-      id:         gerarId(),
-      nome,
-      setor,
-      telefone,
-      email,
-      descricao,
-      data:       d,
-      horaInicio,
-      horaFim
+      id: gerarId(),
+      nome, setor, telefone, email, descricao,
+      data: d, horaInicio, horaFim
     }));
 
     reservas.push(...novasReservas);
     await saveReservas();
 
-    // Adiciona ao calendário
     novasReservas.forEach(r => calendar.addEvent(reservaToEvent(r)));
 
     const qtd = novasReservas.length;
@@ -432,22 +411,45 @@ document.getElementById('reservaForm').addEventListener('submit', async function
 });
 
 /* ============================================================
+   Configuração do Token via modal
+   ============================================================ */
+
+function initTokenConfig() {
+  const token = getToken();
+  const el    = document.getElementById('tokenAtual');
+  if (token) {
+    el.textContent = token.substring(0, 12) + '••••••••';
+  } else {
+    el.textContent = 'Nenhum token configurado.';
+  }
+}
+
+document.getElementById('btnSalvarToken').addEventListener('click', () => {
+  const token = document.getElementById('inputToken').value.trim();
+  if (!token) {
+    alert('Cole o token antes de salvar.');
+    return;
+  }
+  localStorage.setItem('github_token', token);
+  bootstrap.Modal.getInstance(document.getElementById('modalToken')).hide();
+  showAlert('✅ Token salvo com sucesso! Recarregando...', 'success');
+  setTimeout(() => location.reload(), 1500);
+});
+
+/* ============================================================
    Inicialização
    ============================================================ */
 
 async function init() {
-  // Selects de horário
   populateTimeSelects();
+  initTokenConfig();
 
-  // Restringe datas passadas no formulário
   const today = new Date().toISOString().split('T')[0];
   document.getElementById('dataInicio').min = today;
   document.getElementById('dataFim').min    = today;
 
-  // Calendário
   initCalendar();
 
-  // Carrega reservas do GitHub
   const dados = await fetchReservas();
   if (dados.length > 0) {
     populateCalendar();

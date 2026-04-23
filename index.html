@@ -11,9 +11,13 @@
 <body>
 
   <header class="site-header py-3">
-    <div class="container text-center">
+    <div class="container text-center position-relative">
       <h2>📅 Reserva de Auditório - SEVS</h2>
       <p class="mb-0 subtitle">Sistema de agendamento de sala de reunião</p>
+      <button class="btn btn-sm btn-outline-light position-absolute top-50 end-0 translate-middle-y me-2"
+              data-bs-toggle="modal" data-bs-target="#modalToken" title="Configurar Token de Acesso">
+        ⚙️
+      </button>
     </div>
   </header>
 
@@ -140,16 +144,42 @@
     </div>
   </div>
 
+  <!-- Modal: Configuração do Token -->
+  <div class="modal fade" id="modalToken" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header modal-header-custom">
+          <h5 class="modal-title text-white">⚙️ Configuração de Acesso</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p class="text-muted small">
+            Cole o <strong>Personal Access Token</strong> do GitHub com permissão
+            <em>Contents: Read &amp; Write</em> no repositório <code>salacop</code>.<br>
+            O token é salvo apenas neste navegador e nunca é enviado ao repositório.
+          </p>
+          <label class="form-label fw-bold">Token atual</label>
+          <p class="text-muted small mb-3" id="tokenAtual">Nenhum token configurado.</p>
+          <label for="inputToken" class="form-label fw-bold">Novo Token</label>
+          <input type="password" class="form-control" id="inputToken" placeholder="github_pat_...">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary-custom" id="btnSalvarToken">Salvar Token</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <footer class="footer-custom text-center py-3 mt-4">
     <div class="container">
       <small>Desenvolvido por: <strong>Núcleo de Transformação Digital (NTD)</strong> / SEVS RECIFE</small>
     </div>
   </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/locales/pt-br.min.js"></script>
-    <script src="config.local.js"></script>
-    <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/locales/pt-br.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
