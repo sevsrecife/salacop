@@ -1,15 +1,7 @@
 /* ============================================================
-   CONFIGURAÇÃO — token armazenado no localStorage do navegador
+   CONFIGURAÇÃO — proxy Cloudflare Worker
    ============================================================ */
-const REPO_OWNER = 'sevsrecife';
-const REPO_NAME  = 'salacop';
-const FILE_PATH  = 'reservas.json';
-
-function getToken() {
-  return localStorage.getItem('github_token') || '';
-}
-
-const API_URL = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${FILE_PATH}`;
+const API_URL = 'https://salacop-proxy.denis-carvalho.workers.dev';
 /* ============================================================ */
 
 let calendar;
@@ -54,35 +46,17 @@ function hasConflict(data, horaInicio, horaFim, excludeId = null) {
 }
 
 /* ============================================================
-   GitHub API — Leitura e Escrita
+   Cloudflare Worker Proxy — Leitura e Escrita
    ============================================================ */
 
 async function fetchReservas() {
   try {
-    const token = getToken();
+    const res = await fetch(API_URL);
 
-    if (!token) {
-      showAlert(
-        `⚙️ <strong>Token não configurado.</strong><br>
-         Clique no botão <strong>⚙️</strong> no topo da página e cole seu Personal Access Token do GitHub.`,
-        'warning'
-      );
-      return [];
-    }
+    if (!res.ok) throw new Error(`Status ${res.status}`);
 
-    const res = await fetch(API_URL, {
-      headers: {
-        Authorization: `token ${token}`,
-        Accept: 'application/vnd.github.v3+json'
-      }
-    });
-
-    if (!res.ok) {
-      throw new Error(`GitHub API respondeu com status ${res.status}`);
-    }
-
-    const data    = await res.json();
-    currentSha    = data.sha;
+    const data = await res.json();
+    currentSha = data.sha;
 
     const decoded = decodeURIComponent(
       escape(atob(data.content.replace(/\n/g, '')))
@@ -94,7 +68,6 @@ async function fetchReservas() {
     console.error('Erro ao carregar reservas:', err);
     showAlert(
       `⚠️ <strong>Não foi possível carregar as reservas.</strong><br>
-       Verifique se o token está correto clicando em <strong>⚙️</strong> no topo.<br>
        <small class="text-muted">${err.message}</small>`,
       'warning'
     );
@@ -108,11 +81,7 @@ async function saveReservas() {
 
   const res = await fetch(API_URL, {
     method: 'PUT',
-    headers: {
-      Authorization: `token ${getToken()}`,
-      Accept: 'application/vnd.github.v3+json',
-      'Content-Type': 'application/json'
-    },
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       message: `[Sistema] Reserva atualizada em ${new Date().toLocaleString('pt-BR')}`,
       content: encoded,
@@ -125,8 +94,8 @@ async function saveReservas() {
     throw new Error(errData.message || `HTTP ${res.status}`);
   }
 
-  const resData  = await res.json();
-  currentSha     = resData.content.sha;
+  const resData = await res.json();
+  currentSha    = resData.content.sha;
 }
 
 /* ============================================================
@@ -411,38 +380,11 @@ document.getElementById('reservaForm').addEventListener('submit', async function
 });
 
 /* ============================================================
-   Configuração do Token via modal
-   ============================================================ */
-
-function initTokenConfig() {
-  const token = getToken();
-  const el    = document.getElementById('tokenAtual');
-  if (token) {
-    el.textContent = token.substring(0, 12) + '••••••••';
-  } else {
-    el.textContent = 'Nenhum token configurado.';
-  }
-}
-
-document.getElementById('btnSalvarToken').addEventListener('click', () => {
-  const token = document.getElementById('inputToken').value.trim();
-  if (!token) {
-    alert('Cole o token antes de salvar.');
-    return;
-  }
-  localStorage.setItem('github_token', token);
-  bootstrap.Modal.getInstance(document.getElementById('modalToken')).hide();
-  showAlert('✅ Token salvo com sucesso! Recarregando...', 'success');
-  setTimeout(() => location.reload(), 1500);
-});
-
-/* ============================================================
    Inicialização
    ============================================================ */
 
 async function init() {
   populateTimeSelects();
-  initTokenConfig();
 
   const today = new Date().toISOString().split('T')[0];
   document.getElementById('dataInicio').min = today;
