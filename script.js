@@ -207,6 +207,59 @@ document.getElementById('btnFinalDelete').addEventListener('click', async functi
   const pinDigitado = document.getElementById('inputPinDelete').value.trim();
   const reserva     = reservas.find(r => r.id === selectedEventId);
 
+  if (!pinDigitado) {
+    document.getElementById('pinErro').classList.remove('d-none');
+    return;
+  }
+
+  // Verifica PIN da reserva primeiro (local, sem requisição)
+  const pinReservaOk = pinDigitado === reserva?.pin;
+
+  // Se não bater, valida contra PIN admin no Worker
+  let autorizado = pinReservaOk;
+  if (!autorizado) {
+    try {
+      const res  = await fetch(`${API_URL}/validate-admin`, {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body:    JSON.stringify({ pin: pinDigitado })
+      });
+      const data = await res.json();
+      autorizado = data.ok;
+    } catch {
+      autorizado = false;
+    }
+  }
+
+  if (!autorizado) {
+    document.getElementById('pinErro').classList.remove('d-none');
+    return;
+  }
+
+  document.getElementById('pinErro').classList.add('d-none');
+
+  const btn = this;
+  btn.disabled    = true;
+  btn.textContent = 'Excluindo...';
+
+  try {
+    await fetchReservas();
+    reservas = reservas.filter(r => r.id !== selectedEventId);
+    await saveReservas();
+
+    calendar.getEventById(selectedEventId)?.remove();
+    bootstrap.Modal.getInstance(document.getElementById('modalConfirmDelete')).hide();
+    showAlert('✅ Reserva excluída com sucesso!', 'success');
+
+  } catch (err) {
+    console.error('Erro ao excluir:', err);
+    showAlert(`❌ Erro ao excluir reserva: ${err.message}`);
+  } finally {
+    btn.disabled    = false;
+    btn.textContent = 'Confirmar Exclusão';
+  }
+});
+
   // Valida PIN
   if (!pinDigitado || pinDigitado !== reserva?.pin) {
     document.getElementById('pinErro').classList.remove('d-none');

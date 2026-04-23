@@ -118,16 +118,16 @@
   </div>
 
   <!-- Modal: Confirmação de Exclusão -->
-<div class="modal fade" id="modalConfirmDelete" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      <div class="modal-header bg-danger text-white">
-        <h5 class="modal-title">Confirmar Exclusão</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-      </div>
+  <div class="modal fade" id="modalConfirmDelete" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header bg-danger text-white">
+          <h5 class="modal-title">Confirmar Exclusão</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
       <div class="modal-body text-center">
-        <p class="mb-2">Informe o <strong>PIN</strong> definido na reserva para confirmar a exclusão.</p>
-        <input type="password" class="form-control text-center" id="inputPinDelete" maxlength="4" placeholder="PIN de 4 dígitos">
+        <p class="mb-2">Informe o <strong>PIN</strong> da reserva ou o <strong>PIN de administrador</strong>.</p>
+        <input type="password" class="form-control text-center" id="inputPinDelete" maxlength="20" placeholder="PIN">
         <p id="pinErro" class="text-danger small mt-2 d-none">PIN incorreto. Tente novamente.</p>
       </div>
       <div class="modal-footer justify-content-center">
