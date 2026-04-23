@@ -56,6 +56,14 @@
               </div>
             </div>
 
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                <label for="pin" class="form-label">PIN de segurança <span class="text-danger">*</span></label>
+                <input type="password" class="form-control" id="pin" maxlength="4" placeholder="4 dígitos numéricos" required>
+              <div class="form-text">Guarde este PIN — ele será necessário para cancelar a reserva.</div>
+             </div>
+            </div>
+
             <div class="mb-3">
               <label for="descricao" class="form-label">Descrição / Motivo da Reserva <span class="text-danger">*</span></label>
               <input type="text" class="form-control" maxlength="50" id="descricao" placeholder="Máx. 50 caracteres" required>
@@ -110,24 +118,25 @@
   </div>
 
   <!-- Modal: Confirmação de Exclusão -->
-  <div class="modal fade" id="modalConfirmDelete" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-sm">
-      <div class="modal-content">
-        <div class="modal-header bg-danger text-white">
-          <h5 class="modal-title">Confirmar Exclusão</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body text-center">
-          <p class="mb-1">Tem certeza que deseja excluir esta reserva?</p>
-          <p class="text-muted small">Esta ação não pode ser desfeita.</p>
-        </div>
-        <div class="modal-footer justify-content-center">
-          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-danger btn-sm" id="btnFinalDelete">Confirmar Exclusão</button>
-        </div>
+<div class="modal fade" id="modalConfirmDelete" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header bg-danger text-white">
+        <h5 class="modal-title">Confirmar Exclusão</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center">
+        <p class="mb-2">Informe o <strong>PIN</strong> definido na reserva para confirmar a exclusão.</p>
+        <input type="password" class="form-control text-center" id="inputPinDelete" maxlength="4" placeholder="PIN de 4 dígitos">
+        <p id="pinErro" class="text-danger small mt-2 d-none">PIN incorreto. Tente novamente.</p>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-danger btn-sm" id="btnFinalDelete">Confirmar Exclusão</button>
       </div>
     </div>
   </div>
+</div>
 
   <!-- Modal: Configuração do Token -->
   <div class="modal fade" id="modalToken" tabindex="-1" aria-hidden="true">

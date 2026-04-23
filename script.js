@@ -52,7 +52,6 @@ function hasConflict(data, horaInicio, horaFim, excludeId = null) {
 async function fetchReservas() {
   try {
     const res = await fetch(API_URL);
-
     if (!res.ok) throw new Error(`Status ${res.status}`);
 
     const data = await res.json();
@@ -136,9 +135,7 @@ function initCalendar() {
 
 function populateCalendar() {
   calendar.removeAllEvents();
-  reservas.forEach(r => {
-    calendar.addEvent(reservaToEvent(r));
-  });
+  reservas.forEach(r => calendar.addEvent(reservaToEvent(r)));
 }
 
 function reservaToEvent(r) {
@@ -200,10 +197,24 @@ function openEventModal(event) {
 
 document.getElementById('confirmDeleteBtn').addEventListener('click', () => {
   bootstrap.Modal.getInstance(document.getElementById('modalDetalhes')).hide();
+  // Limpa PIN e erro ao abrir modal
+  document.getElementById('inputPinDelete').value = '';
+  document.getElementById('pinErro').classList.add('d-none');
   new bootstrap.Modal(document.getElementById('modalConfirmDelete')).show();
 });
 
 document.getElementById('btnFinalDelete').addEventListener('click', async function () {
+  const pinDigitado = document.getElementById('inputPinDelete').value.trim();
+  const reserva     = reservas.find(r => r.id === selectedEventId);
+
+  // Valida PIN
+  if (!pinDigitado || pinDigitado !== reserva?.pin) {
+    document.getElementById('pinErro').classList.remove('d-none');
+    return;
+  }
+
+  document.getElementById('pinErro').classList.add('d-none');
+
   const btn = this;
   btn.disabled    = true;
   btn.textContent = 'Excluindo...';
@@ -257,12 +268,18 @@ document.getElementById('reservaForm').addEventListener('submit', async function
   const telefone   = document.getElementById('telefone').value.trim();
   const email      = document.getElementById('email').value.trim();
   const descricao  = document.getElementById('descricao').value.trim();
+  const pin        = document.getElementById('pin').value.trim();
   const dataInicio = document.getElementById('dataInicio').value;
   const horaInicio = document.getElementById('inicio').value;
   const horaFim    = document.getElementById('fim').value;
 
-  if (!nome || !setor || !telefone || !email || !descricao || !dataInicio) {
+  if (!nome || !setor || !telefone || !email || !descricao || !dataInicio || !pin) {
     showAlert('⚠️ Preencha todos os campos obrigatórios antes de confirmar.');
+    return;
+  }
+
+  if (!/^\d{4}$/.test(pin)) {
+    showAlert('⚠️ O PIN deve conter exatamente <strong>4 dígitos numéricos</strong>.');
     return;
   }
 
@@ -302,7 +319,7 @@ document.getElementById('reservaForm').addEventListener('submit', async function
 
     const novaReserva = {
       id: gerarId(),
-      nome, setor, telefone, email, descricao,
+      nome, setor, telefone, email, descricao, pin,
       data: dataInicio, horaInicio, horaFim
     };
 
@@ -310,7 +327,7 @@ document.getElementById('reservaForm').addEventListener('submit', async function
     await saveReservas();
 
     calendar.addEvent(reservaToEvent(novaReserva));
-    showAlert('✅ <strong>Reserva registrada com sucesso!</strong>', 'success');
+    showAlert('✅ <strong>Reserva registrada com sucesso!</strong><br>Guarde seu PIN para cancelar a reserva se necessário.', 'success');
     this.reset();
 
   } catch (err) {
