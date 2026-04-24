@@ -22,5 +22,17 @@
     "data": "2026-04-24",
     "horaInicio": "11:00",
     "horaFim": "12:00"
+  },
+  {
+    "id": "mod511owkslhnlw",
+    "nome": "Juliana Serpa",
+    "setor": "COP - Planejamento",
+    "telefone": "81985172900",
+    "email": "juserpalyra@gmail.com",
+    "descricao": "Atualização do TR",
+    "pin": "2204",
+    "data": "2026-04-24",
+    "horaInicio": "14:30",
+    "horaFim": "17:00"
   }
 ]
