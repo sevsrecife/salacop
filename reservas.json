@@ -46,5 +46,17 @@
     "data": "2026-04-28",
     "horaInicio": "14:00",
     "horaFim": "17:00"
+  },
+  {
+    "id": "moh51ocjskmsbve",
+    "nome": "Juliana Dantas Torres Ribeiro",
+    "setor": "CIE Recife",
+    "telefone": "81981368876",
+    "email": "julianaribeiro@recife.pe.gov.br",
+    "descricao": "Reunião PLACON",
+    "pin": "2403",
+    "data": "2026-04-28",
+    "horaInicio": "09:00",
+    "horaFim": "12:00"
   }
 ]
