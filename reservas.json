@@ -34,5 +34,17 @@
     "data": "2026-04-24",
     "horaInicio": "14:30",
     "horaFim": "17:00"
+  },
+  {
+    "id": "moh50avvxrgbdno",
+    "nome": "Juliana Dantas Torres Ribeiro",
+    "setor": "CIE Recife",
+    "telefone": "81981368876",
+    "email": "julianaribeiro@recife.pe.gov.br",
+    "descricao": "Reunião Monitoramento SRAG",
+    "pin": "2403",
+    "data": "2026-04-28",
+    "horaInicio": "14:00",
+    "horaFim": "17:00"
   }
 ]
