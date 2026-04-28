@@ -94,5 +94,17 @@
     "data": "2026-04-30",
     "horaInicio": "09:00",
     "horaFim": "12:00"
+  },
+  {
+    "id": "moiuea5s0tlz2q3",
+    "nome": "Heron Barros",
+    "setor": "Aquila",
+    "telefone": "11991752449",
+    "email": "heron.barros@aquila.com.br",
+    "descricao": "Fechamento Ritual de Gestao",
+    "pin": "2906",
+    "data": "2026-04-28",
+    "horaInicio": "15:00",
+    "horaFim": "18:00"
   }
 ]
