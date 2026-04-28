@@ -94,5 +94,17 @@
     "data": "2026-04-27",
     "horaInicio": "16:00",
     "horaFim": "17:30"
+  },
+  {
+    "id": "moipszwdn9n7g79",
+    "nome": "Juliana Ribeiro",
+    "setor": "CIE Recife",
+    "telefone": "81981368876",
+    "email": "julianaribeiro@recife.pe.gov.br",
+    "descricao": "Reunião PLACON SESAU",
+    "pin": "2403",
+    "data": "2026-04-30",
+    "horaInicio": "09:00",
+    "horaFim": "12:00"
   }
 ]
