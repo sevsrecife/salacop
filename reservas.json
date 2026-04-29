@@ -94,5 +94,17 @@
     "data": "2026-04-28",
     "horaInicio": "15:00",
     "horaFim": "18:00"
+  },
+  {
+    "id": "mokf5vvpl304m68",
+    "nome": "Juliana Ribeiro",
+    "setor": "CIE Recife",
+    "telefone": "81981368876",
+    "email": "julianaribeiro@recife.pe.gov.br",
+    "descricao": "Reunião Matriz PLACON",
+    "pin": "2403",
+    "data": "2026-05-06",
+    "horaInicio": "14:00",
+    "horaFim": "16:00"
   }
 ]
