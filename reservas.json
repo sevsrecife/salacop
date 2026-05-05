@@ -142,5 +142,17 @@
     "data": "2026-05-05",
     "horaInicio": "10:00",
     "horaFim": "11:00"
+  },
+  {
+    "id": "mosyij15b8ujmyg",
+    "nome": "JULIANA DANTAS TORRES RIBEIRO",
+    "setor": "CIE RECIFE",
+    "telefone": "81981368876",
+    "email": "julianaribeiro@recife.pe.gov.br",
+    "descricao": "Reunião com Executiva da SEVS",
+    "pin": "2403",
+    "data": "2026-05-06",
+    "horaInicio": "10:00",
+    "horaFim": "12:00"
   }
 ]
