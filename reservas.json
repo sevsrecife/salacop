@@ -166,5 +166,17 @@
     "data": "2026-05-05",
     "horaInicio": "17:00",
     "horaFim": "18:00"
+  },
+  {
+    "id": "mouh5329l7dou70",
+    "nome": "JULIANA DANTAS TORRES RIBEIRO",
+    "setor": "CIE RECIFE",
+    "telefone": "81981368876",
+    "email": "julianaribeiro@recife.pe.gov.br",
+    "descricao": "Reunião Monitoramento Unidades de Saúde",
+    "pin": "2403",
+    "data": "2026-05-12",
+    "horaInicio": "10:00",
+    "horaFim": "12:00"
   }
 ]
