@@ -202,5 +202,17 @@
     "data": "2026-05-07",
     "horaInicio": "14:00",
     "horaFim": "16:00"
+  },
+  {
+    "id": "movvisudrcau5h0",
+    "nome": "Juliana Serpa",
+    "setor": "COP - Planejamento",
+    "telefone": "81985172900",
+    "email": "juserpalyra@gmail.com",
+    "descricao": "Ajuste de especificação técnica",
+    "pin": "2204",
+    "data": "2026-05-08",
+    "horaInicio": "08:00",
+    "horaFim": "12:00"
   }
 ]
