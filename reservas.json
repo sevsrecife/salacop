@@ -238,5 +238,17 @@
     "data": "2026-05-13",
     "horaInicio": "09:30",
     "horaFim": "14:00"
+  },
+  {
+    "id": "mp1c2xo57bgssa6",
+    "nome": "Danilo Pereira",
+    "setor": "CIE",
+    "telefone": "81997512618",
+    "email": "daniloperei@gmail.com",
+    "descricao": "Reunião",
+    "pin": "1234",
+    "data": "2026-05-11",
+    "horaInicio": "14:00",
+    "horaFim": "15:00"
   }
 ]
