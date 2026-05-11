@@ -214,5 +214,17 @@
     "data": "2026-05-08",
     "horaInicio": "08:00",
     "horaFim": "12:00"
+  },
+  {
+    "id": "mp1369y9cfttpfv",
+    "nome": "Juliana Dantas",
+    "setor": "CIE Recife",
+    "telefone": "81981368876",
+    "email": "torres.juliana@gmail.com",
+    "descricao": "Reunião do CIE",
+    "pin": "2403",
+    "data": "2026-05-11",
+    "horaInicio": "10:00",
+    "horaFim": "12:00"
   }
 ]
