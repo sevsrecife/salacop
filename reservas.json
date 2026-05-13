@@ -262,5 +262,17 @@
     "data": "2026-05-13",
     "horaInicio": "14:00",
     "horaFim": "17:00"
+  },
+  {
+    "id": "mp434imb6cxyaoz",
+    "nome": "Cintia veras canto",
+    "setor": "Cop",
+    "telefone": "81999993242",
+    "email": "cintiaverasc@hotmail.com",
+    "descricao": "TR drones",
+    "pin": "1234",
+    "data": "2026-05-02",
+    "horaInicio": "09:30",
+    "horaFim": "12:00"
   }
 ]
