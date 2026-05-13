@@ -250,5 +250,17 @@
     "data": "2026-05-11",
     "horaInicio": "14:00",
     "horaFim": "15:00"
+  },
+  {
+    "id": "mp42ovtiyvb3r5d",
+    "nome": "JULIANA DANTAS TORRES RIBEIRO",
+    "setor": "CIE RECIFE",
+    "telefone": "81981368876",
+    "email": "julianaribeiro@recife.pe.gov.br",
+    "descricao": "Reunião com Andy (OMS)",
+    "pin": "2403",
+    "data": "2026-05-13",
+    "horaInicio": "14:00",
+    "horaFim": "17:00"
   }
 ]
