@@ -274,5 +274,17 @@
     "data": "2026-05-15",
     "horaInicio": "09:30",
     "horaFim": "12:00"
+  },
+  {
+    "id": "mp5q627g63zb60z",
+    "nome": "Juliana Serpa",
+    "setor": "COP - Planejamento",
+    "telefone": "81985172900",
+    "email": "juserpalyra@gmail.com",
+    "descricao": "Apresentação sistema COP",
+    "pin": "2204",
+    "data": "2026-05-15",
+    "horaInicio": "14:00",
+    "horaFim": "16:30"
   }
 ]
