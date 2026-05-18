@@ -274,5 +274,17 @@
     "data": "2026-05-15",
     "horaInicio": "14:00",
     "horaFim": "16:30"
+  },
+  {
+    "id": "mpbc7z8xp0uscpa",
+    "nome": "Cintia veras",
+    "setor": "Cop",
+    "telefone": "81999993242",
+    "email": "cintiaverasc@jotmail.com",
+    "descricao": "TR sensores",
+    "pin": "1234",
+    "data": "2026-05-18",
+    "horaInicio": "08:00",
+    "horaFim": "18:00"
   }
 ]
