@@ -310,5 +310,17 @@
     "data": "2026-05-19",
     "horaInicio": "15:00",
     "horaFim": "16:30"
+  },
+  {
+    "id": "mpcsax5nck1pv7w",
+    "nome": "Juliana Ribeiro",
+    "setor": "CIE Recife",
+    "telefone": "81981368876",
+    "email": "julianaribeiro@recife.pe.gov.br",
+    "descricao": "Recepção Coord. Nacional Pop. Negra",
+    "pin": "2403",
+    "data": "2026-05-21",
+    "horaInicio": "14:00",
+    "horaFim": "17:00"
   }
 ]
