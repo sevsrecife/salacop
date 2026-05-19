@@ -322,5 +322,17 @@
     "data": "2026-05-21",
     "horaInicio": "14:00",
     "horaFim": "17:00"
+  },
+  {
+    "id": "mpcvyu5gbwbu5ds",
+    "nome": "Mirela Santos",
+    "setor": "Administração COP",
+    "telefone": "(81) 99652-1735",
+    "email": "mirela.santos@recife.pe.gov.br",
+    "descricao": "Reunião Ativação em Eventos",
+    "pin": "3471",
+    "data": "2026-05-20",
+    "horaInicio": "09:00",
+    "horaFim": "11:30"
   }
 ]
