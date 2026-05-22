@@ -346,5 +346,17 @@
     "data": "2026-05-22",
     "horaInicio": "10:00",
     "horaFim": "12:00"
+  },
+  {
+    "id": "mpgy5u9k48hrjph",
+    "nome": "Inspetor Nobrega",
+    "setor": "Guarda Municipal",
+    "telefone": "81987883908",
+    "email": "rildo.nobrega@recife.pe.gov.br",
+    "descricao": "Reunião com fornecedor",
+    "pin": "1234",
+    "data": "2026-05-25",
+    "horaInicio": "08:00",
+    "horaFim": "09:00"
   }
 ]
