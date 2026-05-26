@@ -382,5 +382,17 @@
     "data": "2026-05-29",
     "horaInicio": "14:00",
     "horaFim": "17:00"
+  },
+  {
+    "id": "mpmlky85gu5mu39",
+    "nome": "Juliana Serpa",
+    "setor": "COP - Planejamento",
+    "telefone": "81985172900",
+    "email": "juserpalyra@gmail.com",
+    "descricao": "Arcgis",
+    "pin": "2204",
+    "data": "2026-05-26",
+    "horaInicio": "10:00",
+    "horaFim": "17:00"
   }
 ]
