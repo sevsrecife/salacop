@@ -418,5 +418,17 @@
     "data": "2026-05-27",
     "horaInicio": "08:00",
     "horaFim": "09:00"
+  },
+  {
+    "id": "mpobn5wcpm923m2",
+    "nome": "Rildo nobrega",
+    "setor": "Guarda Municipal",
+    "telefone": "81988836156",
+    "email": "tatianamendes@recife.pe.gov.br",
+    "descricao": "Reuniao dorvededir",
+    "pin": "1234",
+    "data": "2026-05-28",
+    "horaInicio": "08:00",
+    "horaFim": "09:00"
   }
 ]
