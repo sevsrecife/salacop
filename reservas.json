@@ -430,5 +430,17 @@
     "data": "2026-05-28",
     "horaInicio": "08:00",
     "horaFim": "09:00"
+  },
+  {
+    "id": "mppvj8op5g2614p",
+    "nome": "Teo Queiroz",
+    "setor": "Planejamento",
+    "telefone": "81988836156",
+    "email": "tatianamendes@recife.pe.gov.br",
+    "descricao": "Reunião Rec n Play",
+    "pin": "1234",
+    "data": "2026-05-29",
+    "horaInicio": "09:00",
+    "horaFim": "11:30"
   }
 ]
