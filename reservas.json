@@ -430,5 +430,17 @@
     "data": "2026-05-29",
     "horaInicio": "09:00",
     "horaFim": "11:30"
+  },
+  {
+    "id": "mpr0grtn8fmab24",
+    "nome": "JULIANA DANTAS TORRES RIBEIRO",
+    "setor": "CIE RECIFE",
+    "telefone": "81981368876",
+    "email": "julianaribeiro@recife.pe.gov.br",
+    "descricao": "Reunião Monitoramento PLACON SESAU",
+    "pin": "2403",
+    "data": "2026-06-01",
+    "horaInicio": "09:00",
+    "horaFim": "12:00"
   }
 ]
