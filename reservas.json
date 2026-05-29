@@ -442,17 +442,5 @@
     "data": "2026-05-29",
     "horaInicio": "09:00",
     "horaFim": "11:30"
-  },
-  {
-    "id": "mpq8c5uoa9d09dv",
-    "nome": "Denis Carvalho",
-    "setor": "SEVS",
-    "telefone": "819973671005",
-    "email": "denis@denis",
-    "descricao": "teste",
-    "pin": "1234",
-    "data": "2026-06-03",
-    "horaInicio": "08:00",
-    "horaFim": "09:00"
   }
 ]
