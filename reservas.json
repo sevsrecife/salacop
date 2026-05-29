@@ -466,5 +466,17 @@
     "data": "2026-06-30",
     "horaInicio": "14:00",
     "horaFim": "17:00"
+  },
+  {
+    "id": "mpr0jtp54bvgvtc",
+    "nome": "JULIANA DANTAS TORRES RIBEIRO",
+    "setor": "CIE RECIFE",
+    "telefone": "81981368876",
+    "email": "julianaribeiro@recife.pe.gov.br",
+    "descricao": "Visita Ministério da Saúde ao COP/ CIE",
+    "pin": "2403",
+    "data": "2026-06-18",
+    "horaInicio": "08:30",
+    "horaFim": "17:00"
   }
 ]
