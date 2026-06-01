@@ -478,5 +478,17 @@
     "data": "2026-06-02",
     "horaInicio": "15:30",
     "horaFim": "17:00"
+  },
+  {
+    "id": "mpv6p9ti0d392hj",
+    "nome": "Anderson Soares",
+    "setor": "COP",
+    "telefone": "81991738337",
+    "email": "anderson.soares@recife.pe.gov.br",
+    "descricao": "Sistema COP",
+    "pin": "0803",
+    "data": "2026-06-01",
+    "horaInicio": "10:00",
+    "horaFim": "12:30"
   }
 ]
