@@ -502,5 +502,17 @@
     "data": "2026-06-01",
     "horaInicio": "14:00",
     "horaFim": "16:00"
+  },
+  {
+    "id": "mpwoqk00cb0fkko",
+    "nome": "Danilo Pereira",
+    "setor": "CIE",
+    "telefone": "(81)99751-2618",
+    "email": "daniloperei@gmail.com",
+    "descricao": "Alinhamento Interno",
+    "pin": "1639",
+    "data": "2026-06-03",
+    "horaInicio": "10:00",
+    "horaFim": "12:00"
   }
 ]
