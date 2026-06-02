@@ -526,5 +526,17 @@
     "data": "2026-06-03",
     "horaInicio": "09:00",
     "horaFim": "10:00"
+  },
+  {
+    "id": "mpwxghcyy157vq3",
+    "nome": "Maria suarez",
+    "setor": "Aquila",
+    "telefone": "31997777772",
+    "email": "maria.suarez@aquila.com.br",
+    "descricao": "Reunião",
+    "pin": "1111",
+    "data": "2026-06-02",
+    "horaInicio": "15:00",
+    "horaFim": "15:30"
   }
 ]
