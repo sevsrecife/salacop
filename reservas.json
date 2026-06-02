@@ -538,5 +538,17 @@
     "data": "2026-06-02",
     "horaInicio": "15:00",
     "horaFim": "15:30"
+  },
+  {
+    "id": "mpwxpv77cm2i324",
+    "nome": "JULIANA DANTAS TORRES RIBEIRO",
+    "setor": "CIE RECIFE",
+    "telefone": "81981368876",
+    "email": "julianaribeiro@recife.pe.gov.br",
+    "descricao": "Reunião sobre o Painel IST",
+    "pin": "2403",
+    "data": "2026-06-05",
+    "horaInicio": "09:00",
+    "horaFim": "10:30"
   }
 ]
