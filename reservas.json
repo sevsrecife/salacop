@@ -562,5 +562,17 @@
     "data": "2026-06-02",
     "horaInicio": "15:30",
     "horaFim": "16:00"
+  },
+  {
+    "id": "mpy0lvz7k6fnvry",
+    "nome": "Edil",
+    "setor": "Seops",
+    "telefone": "81991536465",
+    "email": "edil.lins@recife.pe.gov.br",
+    "descricao": "Aula cttu",
+    "pin": "0987",
+    "data": "2026-06-08",
+    "horaInicio": "09:00",
+    "horaFim": "12:00"
   }
 ]
