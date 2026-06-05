@@ -574,5 +574,17 @@
     "data": "2026-06-26",
     "horaInicio": "09:00",
     "horaFim": "11:00"
+  },
+  {
+    "id": "mq196r3do6r8sph",
+    "nome": "Juliana Ribeiro",
+    "setor": "CIE Recife",
+    "telefone": "81981368876",
+    "email": "julianaribeiro@recife.pe.gov.br",
+    "descricao": "Trabalho de Conclusão do Rodízio - UPE",
+    "pin": "2403",
+    "data": "2026-06-29",
+    "horaInicio": "14:00",
+    "horaFim": "17:00"
   }
 ]
