@@ -586,5 +586,17 @@
     "data": "2026-06-29",
     "horaInicio": "14:00",
     "horaFim": "17:00"
+  },
+  {
+    "id": "mq5f1831bho1jda",
+    "nome": "Danilo Pereira",
+    "setor": "CIE",
+    "telefone": "81997512618",
+    "email": "daniloperei@gmail.com",
+    "descricao": "Matriz Placon",
+    "pin": "1639",
+    "data": "2026-06-08",
+    "horaInicio": "14:00",
+    "horaFim": "16:00"
   }
 ]
