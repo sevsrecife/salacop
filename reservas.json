@@ -586,5 +586,17 @@
     "data": "2026-06-15",
     "horaInicio": "09:30",
     "horaFim": "11:30"
+  },
+  {
+    "id": "mq6np1mli6b4zct",
+    "nome": "Juliana Dantas Torres Ribeiro",
+    "setor": "CIE Recife",
+    "telefone": "81981368876",
+    "email": "julianaribeiro@recife.pe.gov.br",
+    "descricao": "Reunião Painel SG/SRAG",
+    "pin": "2403",
+    "data": "2026-06-12",
+    "horaInicio": "09:00",
+    "horaFim": "12:00"
   }
 ]
