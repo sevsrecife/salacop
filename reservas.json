@@ -598,5 +598,17 @@
     "data": "2026-06-12",
     "horaInicio": "09:00",
     "horaFim": "12:00"
+  },
+  {
+    "id": "mq8af65hgbch1p0",
+    "nome": "Teo Queiroz",
+    "setor": "Planejamento",
+    "telefone": "81988831656",
+    "email": "tatianamendes@recife.pe.gov.br",
+    "descricao": "Reuniao aquila",
+    "pin": "1234",
+    "data": "2026-06-10",
+    "horaInicio": "14:00",
+    "horaFim": "15:30"
   }
 ]
