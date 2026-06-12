@@ -610,5 +610,17 @@
     "data": "2026-06-10",
     "horaInicio": "14:00",
     "horaFim": "15:30"
+  },
+  {
+    "id": "mqb1uy0c5hhufd3",
+    "nome": "Juliana Ribeiro",
+    "setor": "CIE Recife",
+    "telefone": "81981368876",
+    "email": "julianaribeiro@rceife.pe.gov.br",
+    "descricao": "Apresentação Painel SG/ SRAG",
+    "pin": "2403",
+    "data": "2026-06-19",
+    "horaInicio": "10:00",
+    "horaFim": "11:00"
   }
 ]
