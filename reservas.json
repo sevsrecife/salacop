@@ -622,5 +622,17 @@
     "data": "2026-06-19",
     "horaInicio": "10:00",
     "horaFim": "11:00"
+  },
+  {
+    "id": "mqb20tbs60dmy8v",
+    "nome": "Juliana Ribeiro",
+    "setor": "CIE Recife",
+    "telefone": "81981368876",
+    "email": "julianaribeiro@rceife.pe.gov.br",
+    "descricao": "Reunião SERMAC",
+    "pin": "2403",
+    "data": "2026-06-12",
+    "horaInicio": "12:00",
+    "horaFim": "13:00"
   }
 ]
