@@ -634,5 +634,17 @@
     "data": "2026-06-12",
     "horaInicio": "12:00",
     "horaFim": "13:00"
+  },
+  {
+    "id": "mqgwguh7663h2zw",
+    "nome": "Gabriel Oliveira",
+    "setor": "CIE",
+    "telefone": "81997083496",
+    "email": "gbrl.g.o.l@gmail.com",
+    "descricao": "Reunião Vital",
+    "pin": "1453",
+    "data": "2026-06-16",
+    "horaInicio": "14:00",
+    "horaFim": "16:00"
   }
 ]
