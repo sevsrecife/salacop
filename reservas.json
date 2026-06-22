@@ -646,5 +646,17 @@
     "data": "2026-06-17",
     "horaInicio": "10:30",
     "horaFim": "12:00"
+  },
+  {
+    "id": "mqphq1531gyitam",
+    "nome": "Maria cecilia",
+    "setor": "Aquila",
+    "telefone": "31997777772",
+    "email": "maria.suarez@aquila.com.br",
+    "descricao": "Alinhamento",
+    "pin": "0000",
+    "data": "2026-06-22",
+    "horaInicio": "15:00",
+    "horaFim": "17:00"
   }
 ]
