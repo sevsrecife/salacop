@@ -670,5 +670,17 @@
     "data": "2026-06-25",
     "horaInicio": "12:00",
     "horaFim": "13:00"
+  },
+  {
+    "id": "mqtx6jx37yz3kg7",
+    "nome": "Juliana Dantas",
+    "setor": "CIE Recife",
+    "telefone": "81981368876",
+    "email": "julianaribeiro@recife.pe.gov.br",
+    "descricao": "Reunião alinhamento acesso ao PEC MAC",
+    "pin": "2403",
+    "data": "2026-06-30",
+    "horaInicio": "14:00",
+    "horaFim": "15:30"
   }
 ]
