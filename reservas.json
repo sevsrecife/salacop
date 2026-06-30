@@ -694,5 +694,17 @@
     "data": "2026-06-29",
     "horaInicio": "09:30",
     "horaFim": "12:00"
+  },
+  {
+    "id": "mr0rq0b0yj055y0",
+    "nome": "Anátoli Pinho Reis Modesto",
+    "setor": "Central de Drones",
+    "telefone": "87996147776",
+    "email": "anatolipinho@gmail.com",
+    "descricao": "Reunião",
+    "pin": "7776",
+    "data": "2026-07-01",
+    "horaInicio": "09:00",
+    "horaFim": "11:00"
   }
 ]
