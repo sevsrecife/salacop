@@ -706,5 +706,17 @@
     "data": "2026-07-01",
     "horaInicio": "09:00",
     "horaFim": "11:00"
+  },
+  {
+    "id": "mr0zn1f3d49lxya",
+    "nome": "Lucas Matheus Rodrigues dos Santos",
+    "setor": "Aquila",
+    "telefone": "81998492088",
+    "email": "rlucasmatheus@gmail.com",
+    "descricao": "Reunião",
+    "pin": "1234",
+    "data": "2026-06-30",
+    "horaInicio": "16:00",
+    "horaFim": "18:00"
   }
 ]
