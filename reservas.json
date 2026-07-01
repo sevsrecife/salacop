@@ -718,5 +718,17 @@
     "data": "2026-06-30",
     "horaInicio": "16:00",
     "horaFim": "18:00"
+  },
+  {
+    "id": "mr1z320xt2n5h31",
+    "nome": "Matheus Cavalcanti",
+    "setor": "Aquila",
+    "telefone": "81995786481",
+    "email": "matheus.cavalcanti@aquila.com.br",
+    "descricao": "Reunião",
+    "pin": "1234",
+    "data": "2026-07-01",
+    "horaInicio": "08:00",
+    "horaFim": "09:00"
   }
 ]
