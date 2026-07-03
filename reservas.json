@@ -742,5 +742,17 @@
     "data": "2026-07-02",
     "horaInicio": "15:00",
     "horaFim": "16:00"
+  },
+  {
+    "id": "mr4zvxau4yv4w8u",
+    "nome": "FABIO MATHEUS VIRGINIO DA SILVA",
+    "setor": "Aquila Consultoria",
+    "telefone": "(81)99710-0275",
+    "email": "fabio.silva@aquila.com.br",
+    "descricao": "Reunião",
+    "pin": "1234",
+    "data": "2026-07-03",
+    "horaInicio": "12:00",
+    "horaFim": "13:00"
   }
 ]
