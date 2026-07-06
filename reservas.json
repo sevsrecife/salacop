@@ -766,5 +766,17 @@
     "data": "2026-07-06",
     "horaInicio": "10:00",
     "horaFim": "11:00"
+  },
+  {
+    "id": "mr9l8hwiqmpe0ab",
+    "nome": "Juliana Serpa",
+    "setor": "COP - Planejamento",
+    "telefone": "81985172900",
+    "email": "juserpalyra@gmail.com",
+    "descricao": "Alinhamento- LEDWALL",
+    "pin": "2204",
+    "data": "2026-07-07",
+    "horaInicio": "15:00",
+    "horaFim": "17:00"
   }
 ]
