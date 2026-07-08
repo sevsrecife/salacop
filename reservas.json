@@ -790,5 +790,17 @@
     "data": "2026-07-07",
     "horaInicio": "08:30",
     "horaFim": "10:00"
+  },
+  {
+    "id": "mrc3wyu96g87a21",
+    "nome": "Danilo Pereira",
+    "setor": "CIE",
+    "telefone": "81997512618",
+    "email": "daniloperei@gmail.com",
+    "descricao": "Reunião defesa civil",
+    "pin": "1639",
+    "data": "2026-07-08",
+    "horaInicio": "14:00",
+    "horaFim": "15:30"
   }
 ]
