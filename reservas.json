@@ -802,5 +802,17 @@
     "data": "2026-07-08",
     "horaInicio": "14:00",
     "horaFim": "15:30"
+  },
+  {
+    "id": "mrdqs38v5xv51b7",
+    "nome": "Gabriel",
+    "setor": "CIE",
+    "telefone": "81997083496",
+    "email": "gbrl.g.o.l@gmail.com",
+    "descricao": "Reunião CTTU",
+    "pin": "1453",
+    "data": "2026-07-09",
+    "horaInicio": "14:30",
+    "horaFim": "15:30"
   }
 ]
