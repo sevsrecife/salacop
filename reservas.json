@@ -814,5 +814,17 @@
     "data": "2026-07-09",
     "horaInicio": "14:30",
     "horaFim": "15:30"
+  },
+  {
+    "id": "mrf5pd33aebtffi",
+    "nome": "Juliana Serpa",
+    "setor": "COP - Planejamento",
+    "telefone": "81985172900",
+    "email": "juserpalyra@gmail.com",
+    "descricao": "Atualização do TR",
+    "pin": "2204",
+    "data": "2026-07-10",
+    "horaInicio": "14:00",
+    "horaFim": "15:00"
   }
 ]
