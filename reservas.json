@@ -850,5 +850,17 @@
     "data": "2026-07-15",
     "horaInicio": "08:30",
     "horaFim": "10:30"
+  },
+  {
+    "id": "mrt7iismm78a98e",
+    "nome": "Lucas Matheus Rodrigues dos Santos",
+    "setor": "COP",
+    "telefone": "81998492088",
+    "email": "lucas.rodrigues@aquila.com.br",
+    "descricao": "Reunião alinhamento Aquila",
+    "pin": "1234",
+    "data": "2026-07-20",
+    "horaInicio": "10:30",
+    "horaFim": "11:30"
   }
 ]
