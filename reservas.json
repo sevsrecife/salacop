@@ -886,5 +886,17 @@
     "data": "2026-07-21",
     "horaInicio": "09:00",
     "horaFim": "12:00"
+  },
+  {
+    "id": "mrti17f9mimprk5",
+    "nome": "Juliana Ribeiro",
+    "setor": "CIE Recife",
+    "telefone": "81981368876",
+    "email": "julianaribeiro@recife.pe.gov.br",
+    "descricao": "Recepção Secretária de Saúde do RS",
+    "pin": "2403",
+    "data": "2026-07-23",
+    "horaInicio": "14:30",
+    "horaFim": "17:00"
   }
 ]
