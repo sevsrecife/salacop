@@ -934,5 +934,17 @@
     "data": "2026-07-22",
     "horaInicio": "14:00",
     "horaFim": "17:00"
+  },
+  {
+    "id": "mrxnfh9u2qnexnv",
+    "nome": "JULIANA DANTAS TORRES RIBEIRO",
+    "setor": "CIE RECIFE",
+    "telefone": "81981368876",
+    "email": "julianaribeiro@recife.pe.gov.br",
+    "descricao": "Agenda com Prof. Walter Ramalho (UnB)",
+    "pin": "2403",
+    "data": "2026-07-28",
+    "horaInicio": "14:00",
+    "horaFim": "17:00"
   }
 ]
