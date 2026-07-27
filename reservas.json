@@ -946,5 +946,17 @@
     "data": "2026-07-28",
     "horaInicio": "14:00",
     "horaFim": "17:00"
+  },
+  {
+    "id": "ms378gzi3anayl3",
+    "nome": "Anátoli Pinho",
+    "setor": "Central de drones",
+    "telefone": "87996147776",
+    "email": "anatolipinho@gmail.com",
+    "descricao": "Reunião",
+    "pin": "7776",
+    "data": "2026-07-27",
+    "horaInicio": "09:30",
+    "horaFim": "12:00"
   }
 ]
