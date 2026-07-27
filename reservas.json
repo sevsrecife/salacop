@@ -958,5 +958,17 @@
     "data": "2026-07-27",
     "horaInicio": "09:30",
     "horaFim": "12:00"
+  },
+  {
+    "id": "ms39gftft7ks12k",
+    "nome": "Danilo Pereira",
+    "setor": "CIE",
+    "telefone": "81997512618",
+    "email": "daniloperei@gmail.com",
+    "descricao": "Promorar - GESP",
+    "pin": "1639",
+    "data": "2026-07-30",
+    "horaInicio": "10:00",
+    "horaFim": "13:00"
   }
 ]
