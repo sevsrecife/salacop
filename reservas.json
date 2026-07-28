@@ -970,5 +970,17 @@
     "data": "2026-07-30",
     "horaInicio": "10:00",
     "horaFim": "13:00"
+  },
+  {
+    "id": "ms4qmuzap5lu9wu",
+    "nome": "Juliana Dantas",
+    "setor": "CIE Recife",
+    "telefone": "81981368876",
+    "email": "torres.juliana@gmail.com",
+    "descricao": "Reunião do CIE  com S. Digital",
+    "pin": "2403",
+    "data": "2026-08-05",
+    "horaInicio": "08:30",
+    "horaFim": "12:00"
   }
 ]
