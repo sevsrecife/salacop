@@ -1054,5 +1054,17 @@
     "data": "2026-08-04",
     "horaInicio": "09:00",
     "horaFim": "10:00"
+  },
+  {
+    "id": "msep6be7787dxyx",
+    "nome": "Teo Queiroz",
+    "setor": "Planejamento",
+    "telefone": "81988836156",
+    "email": "tatianamendes@recife.pe.gov.br",
+    "descricao": "Reunião seplag",
+    "pin": "1234",
+    "data": "2026-08-04",
+    "horaInicio": "13:30",
+    "horaFim": "16:30"
   }
 ]
