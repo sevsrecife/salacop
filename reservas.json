@@ -1090,5 +1090,17 @@
     "data": "2026-08-06",
     "horaInicio": "14:30",
     "horaFim": "16:30"
+  },
+  {
+    "id": "mshuvn6x0qm3hgh",
+    "nome": "Joyce Meyrelles",
+    "setor": "COP",
+    "telefone": "81996016959",
+    "email": "joyce.feitoza@recife.pe.gov.br",
+    "descricao": "Reunião de alinhamento - Analistas COP",
+    "pin": "6959",
+    "data": "2026-08-07",
+    "horaInicio": "09:00",
+    "horaFim": "10:30"
   }
 ]
