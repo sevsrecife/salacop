@@ -1102,5 +1102,17 @@
     "data": "2026-08-07",
     "horaInicio": "09:00",
     "horaFim": "10:30"
+  },
+  {
+    "id": "msixs0zg3edzel0",
+    "nome": "Teo Queiroz",
+    "setor": "Planejamento",
+    "telefone": "81988836156",
+    "email": "tatianamendes@recife.pe.gov.br",
+    "descricao": "Mentoria",
+    "pin": "1234",
+    "data": "2026-08-07",
+    "horaInicio": "15:00",
+    "horaFim": "16:00"
   }
 ]
