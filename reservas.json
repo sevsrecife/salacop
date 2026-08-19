@@ -1210,5 +1210,17 @@
     "data": "2026-08-19",
     "horaInicio": "09:30",
     "horaFim": "10:30"
+  },
+  {
+    "id": "mt05x3w9vn6c66t",
+    "nome": "JULIANA DANTAS TORRES RIBEIRO",
+    "setor": "CIE RECIFE",
+    "telefone": "81981368876",
+    "email": "julianaribeiro@recife.pe.gov.br",
+    "descricao": "Visita Profa. Lívia (CAV/UFPE)",
+    "pin": "2403",
+    "data": "2026-08-26",
+    "horaInicio": "14:00",
+    "horaFim": "16:30"
   }
 ]
