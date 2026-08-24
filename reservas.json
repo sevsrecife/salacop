@@ -1246,5 +1246,17 @@
     "data": "2026-09-01",
     "horaInicio": "10:00",
     "horaFim": "16:00"
+  },
+  {
+    "id": "mt78oi8n9xebqto",
+    "nome": "JULIANA DANTAS TORRES RIBEIRO",
+    "setor": "CIE RECIFE",
+    "telefone": "81981368876",
+    "email": "julianaribeiro@recife.pe.gov.br",
+    "descricao": "Acolhimento Residente Geovania Cordeiro UFRPE",
+    "pin": "2403",
+    "data": "2026-08-31",
+    "horaInicio": "08:30",
+    "horaFim": "12:00"
   }
 ]
