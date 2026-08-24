@@ -1234,5 +1234,17 @@
     "data": "2026-08-21",
     "horaInicio": "15:00",
     "horaFim": "16:00"
+  },
+  {
+    "id": "mt78mecefc2u234",
+    "nome": "JULIANA DANTAS TORRES RIBEIRO",
+    "setor": "CIE RECIFE",
+    "telefone": "81981368876",
+    "email": "julianaribeiro@recife.pe.gov.br",
+    "descricao": "Acolhimento Alunos do CESAR School",
+    "pin": "2403",
+    "data": "2026-09-01",
+    "horaInicio": "10:00",
+    "horaFim": "16:00"
   }
 ]
