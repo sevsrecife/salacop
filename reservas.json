@@ -1282,5 +1282,17 @@
     "data": "2026-08-27",
     "horaInicio": "14:00",
     "horaFim": "16:00"
+  },
+  {
+    "id": "mt7jkg9e72sd2qd",
+    "nome": "Juliana Dantas",
+    "setor": "CIE Recife",
+    "telefone": "81981368876",
+    "email": "torres.juliana@gmail.com",
+    "descricao": "Recepção Adaptasus",
+    "pin": "2403",
+    "data": "2026-08-25",
+    "horaInicio": "08:30",
+    "horaFim": "12:00"
   }
 ]
