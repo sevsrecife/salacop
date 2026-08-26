@@ -1294,5 +1294,17 @@
     "data": "2026-08-25",
     "horaInicio": "08:30",
     "horaFim": "12:00"
+  },
+  {
+    "id": "mta2pftk89cmwlu",
+    "nome": "JULIANA DANTAS TORRES RIBEIRO",
+    "setor": "CIE RECIFE",
+    "telefone": "81981368876",
+    "email": "julianaribeiro@recife.pe.gov.br",
+    "descricao": "Reunião sobre Residência em Saúde Digital",
+    "pin": "2403",
+    "data": "2026-08-26",
+    "horaInicio": "10:00",
+    "horaFim": "12:00"
   }
 ]
