@@ -1294,5 +1294,17 @@
     "data": "2026-08-26",
     "horaInicio": "10:00",
     "horaFim": "12:00"
+  },
+  {
+    "id": "mta2qil6jkk2gmn",
+    "nome": "JULIANA DANTAS TORRES RIBEIRO",
+    "setor": "CIE RECIFE",
+    "telefone": "81981368876",
+    "email": "julianaribeiro@recife.pe.gov.br",
+    "descricao": "Reunião Painel Síndromes Respiratórias",
+    "pin": "2403",
+    "data": "2026-08-28",
+    "horaInicio": "09:30",
+    "horaFim": "11:30"
   }
 ]
