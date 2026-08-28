@@ -1306,5 +1306,17 @@
     "data": "2026-09-03",
     "horaInicio": "10:00",
     "horaFim": "11:00"
+  },
+  {
+    "id": "mtd4we5brz8k2ud",
+    "nome": "J TORRES RIBEIRO",
+    "setor": "CIE Recife",
+    "telefone": "81 981368876",
+    "email": "julianaribeiro@recife.pe.gov.br",
+    "descricao": "Acolhimento alunos CESAR School",
+    "pin": "2403",
+    "data": "2026-09-01",
+    "horaInicio": "14:00",
+    "horaFim": "16:00"
   }
 ]
