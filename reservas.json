@@ -1318,5 +1318,17 @@
     "data": "2026-09-01",
     "horaInicio": "14:00",
     "horaFim": "16:00"
+  },
+  {
+    "id": "mtd4ym6hrmwyhl4",
+    "nome": "Juliana Ribeiro",
+    "setor": "CIE Recife",
+    "telefone": "81981368876",
+    "email": "julianaribeiro@recife.pe.gov.br",
+    "descricao": "Acolhimento alunos CESAR School",
+    "pin": "2403",
+    "data": "2026-09-02",
+    "horaInicio": "10:00",
+    "horaFim": "12:00"
   }
 ]
