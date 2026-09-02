@@ -1342,5 +1342,17 @@
     "data": "2026-08-31",
     "horaInicio": "15:30",
     "horaFim": "17:00"
+  },
+  {
+    "id": "mtk62yff54kue9n",
+    "nome": "Juliana Serpa",
+    "setor": "COP - Planejamento",
+    "telefone": "81985172900",
+    "email": "juserpalyra@gmail.com",
+    "descricao": "Treinamento TES",
+    "pin": "2204",
+    "data": "2026-09-04",
+    "horaInicio": "13:30",
+    "horaFim": "15:00"
   }
 ]
