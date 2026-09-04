@@ -1378,5 +1378,17 @@
     "data": "2026-09-10",
     "horaInicio": "10:00",
     "horaFim": "11:30"
+  },
+  {
+    "id": "mtncmeaajpbmrmq",
+    "nome": "Juliana Ribeiro",
+    "setor": "CIE Recife",
+    "telefone": "81981368876",
+    "email": "torres.julianauk@gmail.com",
+    "descricao": "Recepção Equipe Técnica Salvador / BA",
+    "pin": "2404",
+    "data": "2026-09-16",
+    "horaInicio": "14:00",
+    "horaFim": "17:00"
   }
 ]
