@@ -1426,5 +1426,17 @@
     "data": "2026-09-09",
     "horaInicio": "13:00",
     "horaFim": "17:00"
+  },
+  {
+    "id": "mtul3ff0hdnvtdp",
+    "nome": "Bruna Vitória",
+    "setor": "Aquila",
+    "telefone": "81994699017",
+    "email": "bruna.peixoto@aquila.com.br",
+    "descricao": "Ritual de Gestão",
+    "pin": "1234",
+    "data": "2026-09-10",
+    "horaInicio": "09:00",
+    "horaFim": "10:00"
   }
 ]
