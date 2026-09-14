@@ -1462,5 +1462,17 @@
     "data": "2026-09-14",
     "horaInicio": "15:30",
     "horaFim": "16:30"
+  },
+  {
+    "id": "mu1isr1ydxotvc2",
+    "nome": "Danilo Lapa",
+    "setor": "Aquila Tech",
+    "telefone": "81995036268",
+    "email": "danilo.lapa@aquila.com.br",
+    "descricao": "Infraestrutura Rede - COP",
+    "pin": "1509",
+    "data": "2026-09-15",
+    "horaInicio": "09:00",
+    "horaFim": "11:00"
   }
 ]
