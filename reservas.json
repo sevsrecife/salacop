@@ -1486,5 +1486,17 @@
     "data": "2026-09-18",
     "horaInicio": "13:00",
     "horaFim": "17:00"
+  },
+  {
+    "id": "mucnxebhatharc3",
+    "nome": "Joao Carlos",
+    "setor": "Emprel",
+    "telefone": "81987650747",
+    "email": "joaocarloscosta@recife.pe.gov.br",
+    "descricao": "Projeto Recife spacetech",
+    "pin": "1234",
+    "data": "2026-09-22",
+    "horaInicio": "10:00",
+    "horaFim": "12:30"
   }
 ]
