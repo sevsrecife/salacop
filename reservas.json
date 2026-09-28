@@ -1582,5 +1582,17 @@
     "data": "2026-10-02",
     "horaInicio": "14:00",
     "horaFim": "17:00"
+  },
+  {
+    "id": "mul8x5aa6liabnh",
+    "nome": "Bruna Vitória",
+    "setor": "Aquila",
+    "telefone": "81994699017",
+    "email": "bruna.peixoto@aquila.com.br",
+    "descricao": "Reunião de Alinhamento",
+    "pin": "1234",
+    "data": "2026-09-28",
+    "horaInicio": "10:00",
+    "horaFim": "11:00"
   }
 ]
