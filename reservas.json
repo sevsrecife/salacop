@@ -1594,5 +1594,17 @@
     "data": "2026-09-28",
     "horaInicio": "10:00",
     "horaFim": "11:00"
+  },
+  {
+    "id": "muln1pmha497n7g",
+    "nome": "JULIANA DANTAS TORRES RIBEIRO",
+    "setor": "CIE RECIFE",
+    "telefone": "81981368876",
+    "email": "julianaribeiro@recife.pe.gov.br",
+    "descricao": "Reunião sobre o RADAR Saúde",
+    "pin": "2403",
+    "data": "2026-09-29",
+    "horaInicio": "10:00",
+    "horaFim": "12:00"
   }
 ]
