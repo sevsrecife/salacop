@@ -1606,5 +1606,17 @@
     "data": "2026-09-29",
     "horaInicio": "10:00",
     "horaFim": "12:00"
+  },
+  {
+    "id": "muoek8t3i46tn6d",
+    "nome": "Edil",
+    "setor": "Etp drone",
+    "telefone": "81991536465",
+    "email": "edil.lins@recife.pe.gov.br",
+    "descricao": "Etp drone",
+    "pin": "1234",
+    "data": "2026-10-01",
+    "horaInicio": "13:30",
+    "horaFim": "15:00"
   }
 ]
