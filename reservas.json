@@ -1642,5 +1642,17 @@
     "data": "2026-10-05",
     "horaInicio": "14:00",
     "horaFim": "17:00"
+  },
+  {
+    "id": "muqyoq6fxcmi3xw",
+    "nome": "Juliana Ribeiro",
+    "setor": "CIE Recife",
+    "telefone": "81981368876",
+    "email": "julianaribeiro@recife.pe.gov.br",
+    "descricao": "Reunião do CIE",
+    "pin": "2403",
+    "data": "2026-10-02",
+    "horaInicio": "10:00",
+    "horaFim": "11:30"
   }
 ]
