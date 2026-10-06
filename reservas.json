@@ -1666,5 +1666,17 @@
     "data": "2026-10-06",
     "horaInicio": "13:30",
     "horaFim": "17:00"
+  },
+  {
+    "id": "muwnxy1bax74v7p",
+    "nome": "Mirela Santos",
+    "setor": "Administração COP",
+    "telefone": "81996521735",
+    "email": "mirela.santos@recife.pe.gov.br",
+    "descricao": "Reunião Rec n' Play",
+    "pin": "3471",
+    "data": "2026-10-06",
+    "horaInicio": "10:00",
+    "horaFim": "11:30"
   }
 ]
