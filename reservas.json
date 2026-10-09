@@ -1714,5 +1714,17 @@
     "data": "2026-10-14",
     "horaInicio": "09:30",
     "horaFim": "11:00"
+  },
+  {
+    "id": "mv0zpokee6ixje8",
+    "nome": "Juliana Ribeiro",
+    "setor": "CIE Recife",
+    "telefone": "81981368876",
+    "email": "julianaribeiro@recife.pe.gov.br",
+    "descricao": "Reunião Vigidesastres",
+    "pin": "2403",
+    "data": "2026-10-14",
+    "horaInicio": "14:00",
+    "horaFim": "15:30"
   }
 ]
