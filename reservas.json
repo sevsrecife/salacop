@@ -1738,5 +1738,17 @@
     "data": "2026-10-13",
     "horaInicio": "10:30",
     "horaFim": "12:00"
+  },
+  {
+    "id": "mv8j4uc0ffu79nk",
+    "nome": "Juliana Ribeiro",
+    "setor": "CIE Recife",
+    "telefone": "81981368876",
+    "email": "julianaribeiro@recife.pe.gov.br",
+    "descricao": "Visat",
+    "pin": "2403",
+    "data": "2026-10-16",
+    "horaInicio": "09:00",
+    "horaFim": "10:00"
   }
 ]
