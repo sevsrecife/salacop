@@ -1786,5 +1786,17 @@
     "data": "2026-10-29",
     "horaInicio": "09:00",
     "horaFim": "12:00"
+  },
+  {
+    "id": "mv9mzxow63tql6o",
+    "nome": "JULIANA DANTAS TORRES RIBEIRO",
+    "setor": "CIE RECIFE",
+    "telefone": "81981368876",
+    "email": "julianaribeiro@recife.pe.gov.br",
+    "descricao": "Reunião IST - VIGIA",
+    "pin": "2403",
+    "data": "2026-10-29",
+    "horaInicio": "13:30",
+    "horaFim": "16:00"
   }
 ]
