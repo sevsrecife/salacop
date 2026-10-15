@@ -1798,5 +1798,17 @@
     "data": "2026-10-29",
     "horaInicio": "13:30",
     "horaFim": "16:00"
+  },
+  {
+    "id": "mv9n6vgmak50457",
+    "nome": "Denis da Silva Carvalho",
+    "setor": "CIE - SEVS",
+    "telefone": "81997367105",
+    "email": "denis.carvalho@recife.pe.gov.br",
+    "descricao": "Reunião de Monitoramento",
+    "pin": "6576",
+    "data": "2026-10-20",
+    "horaInicio": "14:00",
+    "horaFim": "17:30"
   }
 ]
