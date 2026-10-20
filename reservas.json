@@ -1798,5 +1798,17 @@
     "data": "2026-10-29",
     "horaInicio": "13:30",
     "horaFim": "16:00"
+  },
+  {
+    "id": "mvgx30j6c5nkc8a",
+    "nome": "DENIS DA SILVA CARVALHO",
+    "setor": "CIE - SEVS",
+    "telefone": "81997367105",
+    "email": "denis.carvalho@recife.pe.gov.br",
+    "descricao": "Reunião de Monitoramento NTD CIE SEVS",
+    "pin": "6576",
+    "data": "2026-10-23",
+    "horaInicio": "09:00",
+    "horaFim": "12:30"
   }
 ]
