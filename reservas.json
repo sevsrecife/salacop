@@ -1846,5 +1846,17 @@
     "data": "2026-10-27",
     "horaInicio": "14:30",
     "horaFim": "18:00"
+  },
+  {
+    "id": "mvsduvcf9uc6vv8",
+    "nome": "JULIANA DANTAS TORRES RIBEIRO",
+    "setor": "CIE RECIFE",
+    "telefone": "81981368876",
+    "email": "julianaribeiro@recife.pe.gov.br",
+    "descricao": "Acolhimento Profissional Residente",
+    "pin": "2403",
+    "data": "2026-10-28",
+    "horaInicio": "14:30",
+    "horaFim": "17:00"
   }
 ]
