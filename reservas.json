@@ -1906,5 +1906,17 @@
     "data": "2026-11-05",
     "horaInicio": "13:30",
     "horaFim": "15:00"
+  },
+  {
+    "id": "mw3rmawj9joq0hb",
+    "nome": "Edil Lins",
+    "setor": "Drone",
+    "telefone": "81991536465",
+    "email": "edil.lins@recife.pe.gov.br",
+    "descricao": "treinamento cttu",
+    "pin": "1234",
+    "data": "2026-11-06",
+    "horaInicio": "09:30",
+    "horaFim": "11:00"
   }
 ]
