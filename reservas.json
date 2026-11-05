@@ -1894,5 +1894,17 @@
     "data": "2026-11-04",
     "horaInicio": "08:30",
     "horaFim": "12:00"
+  },
+  {
+    "id": "mw3opabyjdxcuht",
+    "nome": "Danilo pereira",
+    "setor": "CIE",
+    "telefone": "81997512618",
+    "email": "daniloperei@gmail.com",
+    "descricao": "Reunião alinhamento",
+    "pin": "1639",
+    "data": "2026-11-05",
+    "horaInicio": "13:30",
+    "horaFim": "15:00"
   }
 ]
