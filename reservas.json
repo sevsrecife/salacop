@@ -1918,5 +1918,17 @@
     "data": "2026-11-06",
     "horaInicio": "09:30",
     "horaFim": "11:00"
+  },
+  {
+    "id": "mw54p3ccljaa0wm",
+    "nome": "Reunião Sevs",
+    "setor": "Sevs",
+    "telefone": "81997367105",
+    "email": "denis.carvalho@recife.pe.gov.br",
+    "descricao": "Reunião prévia sobre projeto da VITAL",
+    "pin": "6576",
+    "data": "2026-11-09",
+    "horaInicio": "08:00",
+    "horaFim": "10:00"
   }
 ]
