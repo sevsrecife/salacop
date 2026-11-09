@@ -1930,5 +1930,17 @@
     "data": "2026-11-09",
     "horaInicio": "08:00",
     "horaFim": "10:00"
+  },
+  {
+    "id": "mw9apastwlprkxy",
+    "nome": "Juliana Ribeiro",
+    "setor": "CIE Recife",
+    "telefone": "81981368876",
+    "email": "julianaribeiro@recife.pe.gov.br",
+    "descricao": "Reunião Planejamento Carnaval 2027",
+    "pin": "2403",
+    "data": "2026-11-10",
+    "horaInicio": "14:00",
+    "horaFim": "17:00"
   }
 ]
