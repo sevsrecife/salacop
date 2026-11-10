@@ -1942,5 +1942,17 @@
     "data": "2026-11-10",
     "horaInicio": "14:00",
     "horaFim": "17:00"
+  },
+  {
+    "id": "mwb1ljg0cdzvt1l",
+    "nome": "Juliana Ribeiro",
+    "setor": "CIE Recife",
+    "telefone": "81981368876",
+    "email": "julianaribeiro@rceife.pe.gov.br",
+    "descricao": "Carnaval 2027",
+    "pin": "2403",
+    "data": "2026-11-23",
+    "horaInicio": "14:00",
+    "horaFim": "17:00"
   }
 ]
