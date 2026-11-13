@@ -1954,5 +1954,17 @@
     "data": "2026-11-23",
     "horaInicio": "14:00",
     "horaFim": "17:00"
+  },
+  {
+    "id": "mwfb7hdwms94wco",
+    "nome": "Gabriel",
+    "setor": "CIE",
+    "telefone": "81997083496",
+    "email": "gbrl.g.o.l@gmail.com",
+    "descricao": "Reuniao Radar Saúde",
+    "pin": "1453",
+    "data": "2026-11-13",
+    "horaInicio": "15:00",
+    "horaFim": "16:30"
   }
 ]
