@@ -1966,5 +1966,17 @@
     "data": "2026-11-13",
     "horaInicio": "15:00",
     "horaFim": "16:30"
+  },
+  {
+    "id": "mwjcwi17q0w3qn0",
+    "nome": "Juliana Ribeiro",
+    "setor": "CIE Recife",
+    "telefone": "81981368876",
+    "email": "julianaribeiro@recife.pe.gov.br",
+    "descricao": "Reunião Painel IST",
+    "pin": "2403",
+    "data": "2026-11-19",
+    "horaInicio": "14:00",
+    "horaFim": "17:00"
   }
 ]
