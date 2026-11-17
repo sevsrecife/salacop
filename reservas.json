@@ -1990,5 +1990,17 @@
     "data": "2026-11-17",
     "horaInicio": "13:00",
     "horaFim": "16:00"
+  },
+  {
+    "id": "mwkpd4hybb90v73",
+    "nome": "Gabriel Oliveira",
+    "setor": "CIE",
+    "telefone": "81997083496",
+    "email": "gbrl.g.o.l@gmail.com",
+    "descricao": "vital + cie",
+    "pin": "1453",
+    "data": "2026-11-17",
+    "horaInicio": "10:00",
+    "horaFim": "12:00"
   }
 ]
