@@ -2002,5 +2002,17 @@
     "data": "2026-11-17",
     "horaInicio": "10:00",
     "horaFim": "12:00"
+  },
+  {
+    "id": "mwky9mur1to5ugq",
+    "nome": "Emprel",
+    "setor": "Secti",
+    "telefone": "81988836156",
+    "email": "tatianamendes@recife.pe.gov.br",
+    "descricao": "Reuniao",
+    "pin": "1234",
+    "data": "2026-11-19",
+    "horaInicio": "10:00",
+    "horaFim": "12:00"
   }
 ]
