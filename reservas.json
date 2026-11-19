@@ -2038,5 +2038,17 @@
     "data": "2026-11-23",
     "horaInicio": "11:00",
     "horaFim": "12:00"
+  },
+  {
+    "id": "mwnkexbyay73mre",
+    "nome": "Juliana Ribeiro",
+    "setor": "CIE Recife",
+    "telefone": "81981368876",
+    "email": "julianaribeiro@recife.pe.gov.br",
+    "descricao": "Reunião SAS e CIE Recife - dados para os painéis",
+    "pin": "2403",
+    "data": "2026-12-09",
+    "horaInicio": "10:00",
+    "horaFim": "12:00"
   }
 ]
