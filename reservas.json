@@ -2026,5 +2026,17 @@
     "data": "2026-11-18",
     "horaInicio": "09:00",
     "horaFim": "12:00"
+  },
+  {
+    "id": "mwniirw6wqckzjb",
+    "nome": "Juliana Ribeiro",
+    "setor": "CIE Recife",
+    "telefone": "81981368876",
+    "email": "julianaribeiro@recife.pe.gov.br",
+    "descricao": "Reunião Dados APS",
+    "pin": "2403",
+    "data": "2026-11-23",
+    "horaInicio": "11:00",
+    "horaFim": "12:00"
   }
 ]
