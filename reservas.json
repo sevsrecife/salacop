@@ -2050,5 +2050,17 @@
     "data": "2026-11-24",
     "horaInicio": "14:00",
     "horaFim": "16:00"
+  },
+  {
+    "id": "mwxh2qj2t7e0p8s",
+    "nome": "Juliana Ribeiro",
+    "setor": "CIE Recife",
+    "telefone": "81981368876",
+    "email": "torres.julianauk@gmail.com",
+    "descricao": "Acolhimento Profissional Residente",
+    "pin": "2403",
+    "data": "2026-11-26",
+    "horaInicio": "08:00",
+    "horaFim": "12:00"
   }
 ]
