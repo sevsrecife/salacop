@@ -2062,5 +2062,17 @@
     "data": "2026-11-26",
     "horaInicio": "08:00",
     "horaFim": "12:00"
+  },
+  {
+    "id": "mwxn2wko8720pqd",
+    "nome": "Inspetor Riildo Nobrega",
+    "setor": "GCM",
+    "telefone": "81988836156",
+    "email": "tatianamendes@recife.pe.gov.br",
+    "descricao": "Reuniao",
+    "pin": "1234",
+    "data": "2026-11-27",
+    "horaInicio": "08:30",
+    "horaFim": "11:00"
   }
 ]
